@@ -19,6 +19,20 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-recaptcha',
     {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        mergeLinkHeaders: false, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: false, // boolean to turn off the default caching headers
+        headers: {
+          "/schema/**/": ["Access-Control-Allow-Origin:*"],
+          "/schema/*/": ["Access-Control-Allow-Origin:*"],
+          "/schema/**": ["Access-Control-Allow-Origin:*"],
+          "/schema/*": ["Access-Control-Allow-Origin:*"],
+          "/schema/": ["Access-Control-Allow-Origin:*"],
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-brotli',
     },
     {

@@ -1,0 +1,29 @@
+{
+    "counter_statement": {
+        "type": "object",
+        "source": "counter_statement",
+        "nullable": false,
+        "validation_rule": "required"
+    },
+    "amount": {
+        "type": "computed",
+        "source": "sum|counter_statement_transaction_item:amount~counter_statement_transaction",
+        "nullable": false
+    },
+    "original_amount": {
+        "type": "computed",
+        "source": "sum|counter_statement_transaction_item:original_amount~counter_statement_transaction",
+        "nullable": false
+    },
+    "billed_amount": {
+        "type": "computed",
+        "source": "sum|counter_statement_transaction_item:billed_amount~counter_statement_transaction",
+        "nullable": false
+    },
+    "patient": {
+        "type": "object",
+        "source": "patient",
+        "nullable": false,
+        "validation_rule": "required"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "title": "Counter Statements",
+    "slug": "counter/statements",
+    "type": "rows",
+    "rows":[
+        {
+            "label": "",
+            "type" : "flex",
+            "class": "w-full",
+            "elements": [
+                {
+                    "label": "",
+                    "type" : "data_table",
+                    "source": "my_counter_statements",
+                    "class": "flex-1"
+                }
+            ]
+        }
+    ]
+}

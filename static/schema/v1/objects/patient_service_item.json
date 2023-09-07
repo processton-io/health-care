@@ -1,0 +1,20 @@
+{
+    "counter_statement_transaction": {
+        "type": "object",
+        "source": "counter_statement_transaction",
+        "nullable": false,
+        "validation_rule": "required"
+    },
+    "service": {
+        "type": "object",
+        "source": "service",
+        "nullable": false,
+        "validation_rule": "required"
+    },
+    "assigned_to": {
+        "type": "object",
+        "source": "user|group:internal",
+        "nullable": false,
+        "validation_rule": "required|user:internal"
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "object": "appointment",
+    "title": "Create Appointment",
+    "subtitle": "Please provide information below to create Appointment",
+    "rows": [
+        {
+            "label": "",
+            "type" : "flex",
+            "elements": [
+                {
+                    "label": "Patient",
+                    "help": "Please select patient",
+                    "error_message": "Please select valid patient",
+                    "attribute" : "patient",
+                    "item_label" : "first_name|# |last_name|#   (|amount|#)",
+                    "allow_create": true,
+                    "allow_search": true,
+                    "allow_search_create": true,
+                    "create_form" : "create_patient",
+                    "search_form" : "search_patient",
+                    "search_create_form" : "search_create_patient",
+                    "class" : "flex-1",
+                    "invalid_class" : "flex-1"
+                }
+            ]
+        },
+        {
+            "label": "",
+            "type" : "flex",
+            "elements": [
+                {
+                    "label": "Date Time",
+                    "type": "date_time",
+                    "help": "Please enter appointment date and time",
+                    "error_message": "Please select valid future date",
+                    "attribute" : "appointment_date",
+                    "class" : "flex-1",
+                    "invalid_class" : "flex-1"
+                }
+            ]
+        },
+        {
+            "label": "",
+            "type" : "flex",
+            "elements": [
+                {
+                    "label": "Notes",
+                    "type": "textarea",
+                    "help": "Please enter notes",
+                    "error_message": "Please provide valid note",
+                    "attribute" : "notes",
+                    "class" : "flex-1",
+                    "invalid_class" : "flex-1"
+                }
+            ]
+        }
+    ]
+}

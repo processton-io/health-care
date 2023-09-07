@@ -1,0 +1,19 @@
+{
+    "title": {
+        "type": "text",
+        "nullable": false,
+        "validation_rule": "required"
+    },
+    "type": {
+        "type": "object",
+        "source": "service_group",
+        "nullable": false,
+        "validation_rule": "required"
+    },
+    "amount": {
+        "type": "decimal",
+        "nullable": false,
+        "validation_rule": "required",
+        "default": 0
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "patient_service_item": {
+        "type": "object",
+        "source": "patient_service_item",
+        "nullable": false,
+        "validation_rule": "required"
+    },
+    "note": {
+        "type": "textarea",
+        "nullable": false,
+        "validation_rule": "required"
+    },
+    "wrote_by": {
+        "type": "object",
+        "source": "user|group:internal",
+        "nullable": false,
+        "validation_rule": "required|user:internal"
+    }
+}

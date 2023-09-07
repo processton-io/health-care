@@ -1,0 +1,5 @@
+{
+    "title": "Counter",
+    "slug": "counter",
+    "type": "internal:service_counter"
+}

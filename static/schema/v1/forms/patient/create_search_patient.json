@@ -1,0 +1,72 @@
+{
+    "object": "patient",
+    "title": "Search Patient",
+    "subtitle": "Please provide information below to update patient",
+    "rows": [
+        {
+            "label": "",
+            "type" : "flex",
+            "elements": [
+                {
+                    "label": "Name title",
+                    "type": "select",
+                    "help": "Please select name title",
+                    "error_message": "Please select valid name title",
+                    "attribute" : "label",
+                    "class" : "flex-0",
+                    "invalid_class" : "flex-0 border-red-500 text-red-800"
+                },
+                {
+                    "label": "First Name",
+                    "type": "text",
+                    "help": "Please enter first name",
+                    "error_message": "First name should be alphabetical and two character long",
+                    "attribute" : "first_name",
+                    "class" : "flex-1",
+                    "invalid_class" : "flex-1 border-red-500 text-red-800"
+                },
+                {
+                    "label": "Last Name",
+                    "type": "text",
+                    "help": "Please enter last name",
+                    "error_message": "Last name should be alphabetical and two character long",
+                    "attribute" : "last_name",
+                    "class" : "flex-1",
+                    "invalid_class" : "flex-1 border-red-500 text-red-800"
+                }
+            ]
+        },{
+            "label": "",
+            "type" : "flex",
+            "elements": [
+                {
+                    "label": "Email",
+                    "type": "email",
+                    "help": "Please enter email",
+                    "error_message": "Please provide valid email",
+                    "attribute" : "email",
+                    "class" : "flex-1",
+                    "invalid_class" : "flex-1 border-red-500 text-red-800"
+                },
+                {
+                    "label": "Phone",
+                    "type": "phone",
+                    "help": "Please enter phone",
+                    "error_message": "Please provide valid phone",
+                    "attribute" : "phone",
+                    "class" : "flex-1",
+                    "invalid_class" : "flex-1 border-red-500 text-red-800"
+                },
+                {
+                    "label": "Age",
+                    "type": "age",
+                    "help": "Please enter age",
+                    "error_message": "Please provide valid age",
+                    "attribute" : "age",
+                    "class" : "flex-0",
+                    "invalid_class" : "flex-0 border-red-500 text-red-800"
+                }
+            ]
+        }
+    ]
+}

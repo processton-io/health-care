@@ -1,0 +1,20 @@
+{
+    "Name": "Hims",
+    "lts_version": "v1",
+    "latest_version": "v1",
+    "versions": {
+        "v1": {
+            "phase": "released",
+            "path": "v1/index.json"
+        },
+        "v2": {
+            "phase": "beta",
+            "path": "v2/index.json"
+        },
+        "v3": {
+            "phase": "alpha",
+            "path": "v2/index.json"
+        }
+    }
+ 
+}

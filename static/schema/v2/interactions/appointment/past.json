@@ -1,0 +1,20 @@
+{
+    "title": "Past appointments",
+    "slug": "appointments/past",
+    "type": "rows",
+    "rows":[
+        {
+            "label": "",
+            "type" : "flex",
+            "class": "w-full",
+            "elements": [
+                {
+                    "label": "",
+                    "type" : "data_table",
+                    "source": "past_appointments",
+                    "class": "flex-1"
+                }
+            ]
+        }
+    ]
+}

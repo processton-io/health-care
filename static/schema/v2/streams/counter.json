@@ -1,0 +1,12 @@
+{
+    "label" : "Counter",
+    "enable_post": false,
+    "enable_form": true,
+    "form": "counter",
+    "enable_wizard": false,
+    "workflows": {
+        "add_new_receipt": {
+            "start" : "instant"
+        }
+    }
+}
