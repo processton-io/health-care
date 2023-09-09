@@ -1,7 +1,7 @@
 ---
 id: t4DdUaK4o
 type: page
-layout: null
+layout: pillar-builder
 title: Documentation
 permalink: /documentation
 breadcrumbs:
