@@ -1,0 +1,8 @@
+{
+  "type": "permission",
+  "layout": "permissions-builder",
+  "id": "LAtMWkmqz",
+  "name": "Services",
+  "key": "services",
+  "permalink": "/schema/objects/service/"
+}

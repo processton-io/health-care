@@ -9,6 +9,13 @@ import pillar from './collections/pillar';
 import blogs from './collections/blogs';
 import authors from './collections/authors';
 import settings from './collections/settings';
+
+
+import objects from './collections/objects';
+import permissions from './collections/permissions';
+import roles from './collections/roles';
+import schema_forms from './collections/schema_forms';
+
 import PagePreview from './previews/Page';
 import BlogPreview from './previews/Blog';
 import PillarPreview from './previews/Pillar';
@@ -22,7 +29,7 @@ const config = {
     local_backend: true,
     backend: {
       name: 'git-gateway',
-      branch: 'prod',
+      branch: 'main',
     },
     slug: {
       encoding: 'ascii',
@@ -30,7 +37,7 @@ const config = {
     },
     media_folder: '/static/img',
     public_folder: '/img',
-    collections: [ pillar, pages, blogs, forms,authors, settings, theme_docs],
+    collections: [ pillar, pages, forms,authors, settings, objects, permissions, roles, schema_forms],
   },
 };
 

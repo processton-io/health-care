@@ -1,0 +1,8 @@
+{
+  "type": "permission",
+  "layout": "permissions-builder",
+  "id": "MZi3HRjAg",
+  "name": "Customer",
+  "key": "customer",
+  "permalink": "/schema/objects/customer/"
+}

@@ -2,10 +2,11 @@ const path = require('path')
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-
+const siteUrl = process.env.GATSBY_APP_URL || 'http://localhost:8000';
 module.exports = {
   siteMetadata: {
-    siteUrl: process.env.GATSBY_APP_URL || 'http://localhost:8000',
+    siteUrl: siteUrl,
+    siteDescription: ''
   },
   flags: {
     DEV_SSR: true,
@@ -74,6 +75,20 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-transformer-json',
+      options: {
+        path: `${__dirname}/content/schema/objects/`,
+        name: 'structureObjects',
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-json',
+      options: {
+        path: `${__dirname}/content/schema/permissions/`,
+        name: 'structurePermissions',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-root-import',
       options: {
         '@': path.join(__dirname, 'src'),
@@ -101,6 +116,80 @@ module.exports = {
         host: process.env.GATSBY_APP_URL || 'http://localhost:8000',
         sitemap: process.env.GATSBY_APP_URL || 'http://localhost:8000' + '/sitemap-0.xml',
         policy: [{userAgent: '*', disallow: ['/sponsered-by', '/theme/*']}]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: siteUrl, // defined on top of plugins
+        graphQLQuery: `
+          {
+            allPermissionsJson {
+              nodes {
+                id
+                key
+                name
+                sub_group
+                group
+                type
+              }
+            }
+          }
+        `,
+        feedMeta: {
+          author: {
+            name: 'Service center Schema',
+          },
+          description: "This Feed Contain Permissions schema",
+          favicon: `${siteUrl}/icons/icon-48x48.png`,
+          title: "Permission",
+        },
+        serializeFeed: results => results.data.allPermissionsJson.nodes.map((key, name, group, sub_group, type) => {
+          return {
+            key: key,
+            name: name,
+            group: group,
+            sub_group: sub_group,
+            type: type
+          }
+        }),
+        feedFilename: "schema/permissions",
+        nodesPerFeedFile: 1000,
+      }
+    },
+    {
+      resolve: `gatsby-plugin-json-output`,
+      options: {
+        siteUrl: siteUrl, // defined on top of plugins
+        graphQLQuery: `
+          {
+            allObjectsJson {
+              nodes {
+                id
+                key
+                name
+                type
+              }
+            }
+          }
+        `,
+        feedMeta: {
+          author: {
+            name: 'Service center Schema',
+          },
+          description: "This Feed Contain Objects schema",
+          favicon: `${siteUrl}/icons/icon-48x48.png`,
+          title: "Objects",
+        },
+        serializeFeed: results => results.data.allObjectsJson.nodes.map(({key, name, type}) => {
+          return {
+            slug: key,
+            name: name,
+            type: type
+          }
+        }),
+        feedFilename: "schema/objects",
+        nodesPerFeedFile: 1000,
       }
     },
     'gatsby-plugin-sitemap',

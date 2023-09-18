@@ -1,0 +1,13 @@
+{
+    "name": "Service Center v1",
+    "lts_versions": {
+        "name": "v1",
+        "url": "https://customer-care.netlify.app/schema/index.json"
+    },
+    "versions": [
+        {
+            "name": "dev",
+            "url": "https://dev--customer-care.netlify.app/schema/index.json"
+        }   
+    ]
+}

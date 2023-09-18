@@ -1,20 +1,13 @@
 {
-    "Name": "Hims",
-    "lts_version": "v1",
-    "latest_version": "v1",
-    "versions": {
-        "v1": {
-            "phase": "released",
-            "path": "v1/index.json"
-        },
-        "v2": {
-            "phase": "beta",
-            "path": "v2/index.json"
-        },
-        "v3": {
-            "phase": "alpha",
-            "path": "v2/index.json"
-        }
+    "name": "Service Center",
+    "version": "v1",
+    "files": {
+        "permissions": [
+            "https://customer-care.netlify.app/schema/permissions-1.json"
+        ],
+        "objects": [
+            "https://customer-care.netlify.app/schema/objects-1.json"
+        ]
     }
  
 }

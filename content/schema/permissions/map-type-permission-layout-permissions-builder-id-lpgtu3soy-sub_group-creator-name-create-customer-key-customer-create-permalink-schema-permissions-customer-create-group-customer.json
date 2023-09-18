@@ -1,0 +1,10 @@
+{
+  "type": "permission",
+  "layout": "permissions-builder",
+  "id": "LPGTU3SOY",
+  "sub_group": "Creator",
+  "name": "Create customer",
+  "key": "customer.create",
+  "permalink": "/schema/permissions/customer/create/",
+  "group": "customer"
+}
